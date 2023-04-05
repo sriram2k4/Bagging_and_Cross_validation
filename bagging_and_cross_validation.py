@@ -32,13 +32,13 @@ X_test = scaler.transform(X)
 
 
 ### Split train and test dataset
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=2)
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=0)
 
 ### Bagging using Decision Tree Classifier and Cross Validation
 decision_tree_bagging_model = BaggingClassifier(
     base_estimator=DecisionTreeClassifier(),
-    n_estimators=40,
-    max_samples=70,
+    n_estimators=50,
+    max_samples=80,
     oob_score=True,
     random_state=0
 )
